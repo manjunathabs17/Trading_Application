@@ -1,0 +1,115 @@
+<!-- <form class="input_form" *ngIf="!submitClicked" (submit)="openIframes()"> -->
+<!-- <form class="input_form" *ngIf="!submitClicked"> -->
+<!-- <a class="home" href="/">Trading</a> -->
+
+<!-- <app-learn></app-learn> -->
+<div
+  class="header bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ..."
+>
+  <a class="home" href="/">
+    <h1
+      class="trading mb-10 font-serif hover:font-serif tracking-wider box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ... hover:text-black ease-in duration-200"
+    >
+      <!-- <span> <img class="w-10 h-10" src="assets/logo.jpg" /></span>  -->
+      ↂ Trading Partner
+    </h1>
+  </a>
+  <div class="learn bg-pink-500">
+    <a routerLink="/learn" class="learn_txt bg-pink-500 font-serif">Learn</a>
+  </div>
+</div>
+
+<div class="input_form">
+  <label clas="label_box " for="url1">URL 1 <br /></label>
+  <input
+    class="input1"
+    type="text"
+    id="url1"
+    [(ngModel)]="url1"
+    required
+    placeholder="Enter URL"
+  /><br />
+
+  <!-- *ngIf="url1.length > 0" -->
+  <button *ngIf="url1" class="clear_button" (click)="clearUrl('url1')">
+    <i class="bi bi-x-circle"></i>
+  </button>
+  <!-- <button (click)="clearUrl('url1')">Clear</button> -->
+
+  <label for="url2">URL 2<br /></label>
+  <input
+    class="input1"
+    type="text"
+    id="url2"
+    [(ngModel)]="url2"
+    required
+    placeholder="Enter URL"
+  /><br />
+  <button *ngIf="url2" class="clear_button" (click)="clearUrl('url2')">
+    <i class="bi bi-x-circle"></i>
+  </button>
+
+  <label for="url3">URL 3<br /></label>
+  <input
+    class="input1"
+    type="text"
+    id="url3"
+    [(ngModel)]="url3"
+    required
+    placeholder="Enter URL"
+  /><br />
+  <button *ngIf="url3" class="clear_button" (click)="clearUrl('url3')">
+    <i class="bi bi-x-circle"></i>
+  </button>
+
+  <label for="url4">URL 4<br /></label>
+  <input
+    class="input1"
+    type="text"
+    id="url4"
+    [(ngModel)]="url4"
+    required
+    placeholder="Enter URL"
+  /><br />
+  <button *ngIf="url4" class="clear_button" (click)="clearUrl('url4')">
+    <i class="bi bi-x-circle"></i>
+  </button>
+  <!-- </form> -->
+</div>
+<div class="button_box">
+  <button
+    class="font-mono button shadow-lg shadow-cyan-500/50 ... transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
+    type="submit"
+    (click)="openIframes()"
+  >
+    Submit
+  </button>
+</div>
+<div class="animation_div">
+  <!-- <div
+    class="animation w-96 h-80 bg-gradient-to-r from-indigo-600 to-pink-500 absolute top-0 -left-5 -z-10 blur-2xl opacity-40 overflow-hidden rounded-full mt-96"
+  ></div> -->
+</div>
+<div
+  class="animation w-96 h-96 bg-gradient-to-r from-indigo-600 to-pink-500 absolute top-0 -left-5 z-10 blur-2xl opacity-10 overflow-hidden rounded-full"
+></div>
+<ng-container *ngIf="loading"> Loading... </ng-container>
+
+<!-- <ng-template #iframeTemplate> -->
+<ng-template [ngIf]="url1 || url2 || url3 || url4">
+  <app-home-page
+    [url1]="url1"
+    [url2]="url2"
+    [url3]="url3"
+    [url4]="url4"
+    *ngIf="submitClicked"
+  ></app-home-page>
+</ng-template>
+
+<div #iframeContainer class="iframe-container">
+  <iframe #iframe *ngIf="selectedUrl" [src]="selectedUrl"></iframe>
+</div>
+
+<!-- "http://maps.google.com/?ie=UTF8&amp;t=m&amp;ll=37.09024,-95.712891&amp;spn=26.535573,37.353516&amp;z=4&amp;output=embed" -->
+
+<!-- <router-outlet></router-outlet> -->

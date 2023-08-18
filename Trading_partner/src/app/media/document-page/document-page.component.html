@@ -1,0 +1,678 @@
+<div class="learn_header">
+  <h1 class="bg-black font-mono w-full h-20 text-center text-4xl">
+    Welcome to Trading
+  </h1>
+  <div class="container">
+    <div class="flex text-center font-serif text-4xl">
+      <!-- <a routerLink="" class="bg-slate-400 w-full">Vedios</a> -->
+      <h1
+        class="bg-gradient-to-r from-indigo-600 to-pink-500 hover:text-pink-600 ease-in duration-300 text-4xl"
+      >
+        Documents
+      </h1>
+
+      <!-- <div class="form-floating">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+        >
+          <option selected>Choose Level</option>
+          <a class="dropdown-item">Item 1</a>
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+        </select>
+        <label for="floatingSelect"></label>
+      </div> -->
+
+      <!-- ========================================= -->
+      <div class="dropdown">
+        <select [(ngModel)]="selectedLevel">
+          <!-- <option selected>Choose Level</option> -->
+          <option value="0">Select Level</option>
+          <option [ngValue]="'1'">Level 1</option>
+          <option [ngValue]="'2'">Level 2</option>
+          <option [ngValue]="'3'">Level 3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="doc_content">
+    <div>
+      <h1 class="text-5xl font-extrabold text-center mb-10">
+        Level Up Your Trading Skills <br />
+      </h1>
+    </div>
+    <div class="w-1/2 h-20 text-center justify-center ml-96">
+      <p class="text-2xl font-semibold text-center">
+        Whether you want to excel in web development, mobile development or
+        strengthen your fundamental software engineering skills, there is a
+        course for you.
+      </p>
+    </div>
+  </div> -->
+
+  <div class="doc_container" *ngIf="selectedLevel === '1'">
+    <div class="card mb-3" style="max-width: 540px">
+      <h1 class="text-4xl font-extrabold font-mono mb-10">
+        Candle stick Charting Guide
+      </h1>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="https://entertrader.in/wp-content/uploads/2022/10/Bearish_and_Bullish_Candlestick.jpg"
+            class="img-fluid rounded-start w-full h-72 border border-purple-400 rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+            >
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer.This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer.
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-3xl mt-10 font-serif font-semibold mb-0">
+        Candle properties
+      </h1>
+
+      <div class="row g-0 mt-10">
+        <div class="col-md-4">
+          <img
+            src="assets/colour.png"
+            class="img-fluid rounded-start h-72 w-full border rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">Colour</h5>
+            <p
+              class="card-text font-normal list-inside bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+            >
+              • The colour is generally displayed as green and red candles.
+              <br />
+              • Green candles are bullish, closing higher than the open.t<br />
+              • Red candles are bearish, closing lower than the open.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 mt-20">
+        <div class="col-md-4">
+          <img
+            src="assets/body.png"
+            class="img-fluid rounded-start w-full h-72 border border-fuchsia-500 rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Body Size
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+            >
+              • The body size represents the degree to which the bulls overcome
+              the bers (green candle) or the bears overcome the bulls (red
+              candle). <br />
+              • A large body shows incresed commitment<br />
+              • A small body shows reduced commitment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0 mt-20">
+          <div class="col-md-4">
+            <img
+              src="assets/range.png"
+              class="img-fluid rounded-start h-72 w-full border rounded-xl"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-xl text-center font-semibold">
+                Range
+              </h5>
+              <p
+                class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+              >
+                • The range of the candle is the distance from the high to the
+                low, and represents the volatility of the price during the
+                trading session. <br />
+                • A wide range shows increased volatility<br />
+                • A narrow range shows redused volatility
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0 mt-20">
+          <div class="col-md-4">
+            <img
+              src="assets/shadow.png"
+              class="img-fluid rounded-start h-72 w-full border rounded-xl"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-xl text-center font-semibold">
+                Shadow Loation
+              </h5>
+              <p
+                class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+              >
+                • Shadows above the real body show rejection of higher
+                prices(selling). <br />
+                • Shadows below the real body show rejection of lower
+                prices(buying)<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-4xl mt-10 -mb-10">Doji</h1>
+
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0 mt-20">
+          <div class="col-md-4">
+            <img
+              src="assets/doji.png"
+              class="img-fluid rounded-start h-72 w-full border rounded-xl"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-xl text-center font-semibold">
+                Description
+              </h5>
+              <p
+                class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+              >
+                • BULLISH or BEARISH single candle Reversal Pattern. <br />
+                • The open is equal to (or almost equal to) the close,resulting
+                in no real body. Indecision in the market - neither the bulls
+                nor bears are in control.
+                <br />
+                • The Doji can be found at the top or bottom. The Gravestone
+                Doji is usually found at a top reversal. The Dragonfly Doji is
+                usually found at a bottom reversal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 mt-20">
+        <div class="col-md-4">
+          <img
+            src="assets/Doji_Graph.png"
+            class="img-fluid rounded-start h-72 w-full border rounded-xl"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-xl text-center font-semibold">
+            Description
+          </h5>
+
+          <div
+            class="card-text text-center font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+          >
+            <h1 class="font-semibold text-lg underline ml-4">Setup</h1>
+            <p>
+              A trending market - an uptrend for a bearish reversal, or
+              downtrend for a bullish reversal.
+            </p>
+
+            <h1 class="font-semibold text-lg underline">Psychology</h1>
+            • A Doji indicates a `tug-of-war` between the bulls and bears in
+            which neither party was dominant. Price mat have been up and driven
+            up and/or down from the open, but was driven back to close equal to
+            (or almost eqaul to) the opening price. This indecision in the
+            market often precedes a change in trend to either a sideways or a
+            reverse direction trend<br />
+            The Gravestone Doji is more bearish, and therefore more effective at
+            a market top. The Dragonfly Doji is more bullish, and therefore more
+            effective at a market bottom.<br />
+            <h1 class="font-semibold text-lg underline">Confirmation</h1>
+            The price trades above the doji at a market bottom, or below the
+            doji at a market top.
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-20" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <h1 class="text-4xl text-center mb-5">Shooting Star</h1>
+        <!-- <h1 class="text-4xl font-thin text-zinc-50">ShootingStar</h1> -->
+        <div class="col-md-4 m-1 w-96">
+          <img
+            src="assets/ShootingStar.png"
+            class="img-fluid rounded-start w-96 h-72 border-5 border-red-400 rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              ShootingStar
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5rounded-t"
+            >
+              • BEARISH single candle Reversal Patten. <br />
+              • Market gaps up to Shooting Star candle.
+              <br />
+              • Colour can be RED or GREEN.<br />
+              • Upper Shadow is at least 2 times the size of the real body.
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="assets/Shooting_Graph.png"
+            class="img-fluid rounded-start w-full h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <div
+              class="card-text text-center font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+            >
+              <h1 class="font-semibold text-lg underline">Setup</h1>
+              Uptrend<br />
+              <h1 class="font-semibold text-lg underline">Psychology</h1>
+              <p>
+                The bulls continue the uptrend by gapping the price up at the
+                open and driving it to new highs. The bears come back in force
+                though and drive price back down. A red Shooting Star is more
+                bearish than a green Shooting Star, due to the bears ability to
+                force the close of the candle below the opening price.
+              </p>
+
+              <h1 class="font-semibold text-lg underline">Confirmation</h1>
+              <p>
+                The Price trades below the body of the Shooting Star candle.
+              </p>
+            </div>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-72" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <!-- <h1 class="text-4xl font-thin text-zinc-50">ShootingStar</h1> -->
+        <div class="col-md-4 m-1 w-96">
+          <img
+            src="assets/HangingMan.png"
+            class="img-fluid rounded-start w-96 h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Hanging Man
+            </h5>
+
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 rounded-t"
+            >
+              • BEARISH single candle Reversal Patten. <br />
+              • Market gaps up to Hanging Man candle.
+              <br />
+              • Colour can be RED or GREEN.<br />
+              • Lower Shadow is at least 2 times the size of the real body.
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="assets/Han.png"
+            class="img-fluid rounded-start w-full h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5> -->
+            <div
+              class="card-text text-center font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              <h1 class="font-semibold text-lg underline">Setup</h1>
+              Uptrend<br />
+              <h1 class="font-semibold text-lg underline">Psychology</h1>
+              The uptrend intially appeared that it would continue strongly as
+              the price gapped up at the open, however the bears fought back
+              strongly driving price convincingly lower.Although the bulls were
+              able to resist the downward pressure, this is only temporary. A
+              red Hanging Man is more bearish than a green Hanging Man, due to
+              the bulls inability to force the close of the candle above the
+              opening price. The Hanging Man is not considered as bearish as the
+              Shooting Star, due to the fact that the bulls were able to fight
+              back to some degree.<br />
+
+              <h1 class="font-semibold text-lg underline">Confirmation</h1>
+              The Price trades below the body of the Hanging Man candle.
+            </div>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-72" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <!-- <h1 class="text-4xl font-thin text-zinc-50">ShootingStar</h1> -->
+        <div class="col-md-4 m-1 w-96">
+          <img
+            src="assets/Hammer.png"
+            class="img-fluid rounded-start w-96 h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">Hammer</h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BULLISH single candle Reversal Patten. <br />
+              • Market ideally gaps up to Hammer candle.
+              <br />
+              • Colour can be RED or GREEN.<br />
+              • Lower Shadow is at least 2 times the size of the real body.
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="assets/HammerGraph.png"
+            class="img-fluid rounded-start w-full h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5> -->
+            <div
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              <h1 class="font-semibold text-lg underline">Setup</h1>
+              Downtrend<br />
+              <h1 class="font-semibold text-lg underline">Psychology</h1>
+              The bears continue the downtrend by gapping the price down at the
+              open and driving it to new lows. The bulls come back in force
+              though and drive price back up. A green Hammer is more bullish
+              than a red Hammer, due to the bulls ability to force the close of
+              the candle above the opening price.<br />
+
+              <h1 class="font-semibold text-lg underline">Confirmation</h1>
+              The Price trades above the Hammer candle's real body.
+            </div>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-72" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <!-- <h1 class="text-4xl font-thin text-zinc-50">ShootingStar</h1> -->
+        <div class="col-md-4 m-1 w-96">
+          <img
+            src="assets/InvertedHammer.png"
+            class="img-fluid rounded-start w-96 h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Inverted Hammer
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BULLISH single candle Reversal Patten. <br />
+              • Market ideally gaps up to Inverted Hammer candle.
+              <br />
+              • Colour can be RED or GREEN.<br />
+              • Upper Shadow is at least 2 times the size of the real body.
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="assets/InvertedHammerGraph.png"
+            class="img-fluid rounded-start w-full h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5> -->
+            <div
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              <h1 class="font-semibold text-lg underline">Setup</h1>
+              Downtrend<br />
+              <h1 class="font-semibold text-lg underline">Psychology</h1>
+              The downtrend initially appeared that it would continue strongly
+              as the price gapped down at the open, however the bulls fought
+              back strongly driving price convincingly higher. Although the
+              bears were able tp resist the upward pressure, this is only
+              temporary. A green Inverted Hammer is more bullsih than a red
+              Inverted Hammer, due to the bear's inability to force the close of
+              the candle below the opening price. The Inverted Hammer is not
+              considered as bullish as the Hammer, due to the fact that the beas
+              able to fight back to some degree.<br />
+
+              <h1 class="font-semibold text-lg underline">Confirmation</h1>
+              The Price trades above the Inverted Hammer candle.
+            </div>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-72" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <!-- <h1 class="text-4xl font-thin text-zinc-50">ShootingStar</h1> -->
+        <div class="col-md-4 m-1 w-96">
+          <img
+            src="assets/bullish_Engu.png"
+            class="img-fluid rounded-start w-96 h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bullish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BULLISH two candle Reversal Patten. <br />
+              • First candle has a smaller RED real body.
+              <br />
+              • Second longer GREEN candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="assets/bullish_EnguGraph.png"
+            class="img-fluid rounded-start w-full h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5> -->
+            <div
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              <h1 class="font-semibold text-lg underline">Setup</h1>
+              Downtrend<br />
+              <h1 class="font-semibold text-lg underline">Psychology</h1>
+              This is a very bullish reversal pattern in which the bulls inflict
+              a rapid and decisive victory over the bears. The downtrend
+              continues via a red bodied candle.The opening of the next candle
+              ideally gaps down(continued sign of bearsishness) however the
+              bulls then drive the price upwards to close the candle above the
+              open of the red bodied candle. The name 'bullish engulfing' is due
+              to the fact that the real body of the green candle completely
+              engulfs the real body of the red candle. <br />
+
+              <h1 class="font-semibold text-lg underline">Confirmation</h1>
+              The Price trades above the body of the green candle.
+            </div>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-72" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <!-- <h1 class="text-4xl font-thin text-zinc-50">ShootingStar</h1> -->
+        <div class="col-md-4 m-1 w-96">
+          <img
+            src="assets/Bearish_Engu.png"
+            class="img-fluid rounded-start w-96 h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 m-1">
+          <img
+            src="assets/Bearish_EnguGraph.png"
+            class="img-fluid rounded-start w-full h-72 border rounded-xl"
+            alt="..."
+          />
+        </div>
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5> -->
+            <div
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              <h1 class="font-semibold text-lg underline">Setup</h1>
+              Uptrend<br />
+              <h1 class="font-semibold text-lg underline">Psychology</h1>
+              This is a very bearish reversal pattern in which the bears inflict
+              a rapid and decisive victory over the bulls. The uptrend continues
+              via a green bodied candle.The opening of the next candle ideally
+              gaps upwards(continued sign of bullishness) however the bears then
+              drive the price down to close the candle below the open of the
+              green bodied candle. The name 'bearsish engulfing' is due to the
+              fact that the real body of the red candle completely engulfs the
+              real body of the green candle. <br />
+
+              <h1 class="font-semibold text-lg underline">Confirmation</h1>
+              The Price trades above the body of the red candle.
+            </div>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedLevel === '2'">
+    <h1>Working in progress</h1>
+  </div>
+  <div *ngIf="selectedLevel === '3'">
+    <h1>Working in progress</h1>
+  </div>
+</div>

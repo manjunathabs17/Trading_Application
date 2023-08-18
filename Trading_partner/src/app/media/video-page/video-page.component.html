@@ -1,0 +1,516 @@
+<div class="learn_header">
+  <h1 class="bg-black font-mono w-full h-20 text-center text-4xl">
+    Welcome to Trading
+  </h1>
+  <div class="container h-40">
+    <div class="flex text-center font-serif text-4xl">
+      <!-- <a routerLink="" class="bg-slate-400 w-full">Vedios</a> -->
+      <h1
+        class="bg-gradient-to-r from-indigo-600 to-pink-500 text-4xl text-center hover:text-pink-600 ease-in duration-300"
+      >
+        Videos
+      </h1>
+
+      <div class="dropdown">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+          [(ngModel)]="selectedLevel"
+        >
+          <!-- <option value="0">Select Level</option> -->
+          <!-- <option selected>Choose Level</option> -->
+          <a class="dropdown-item">Item 1</a>
+          <option [ngValue]="'1'">Level 1</option>
+          <option [ngValue]="'2'">Level 2</option>
+          <option [ngValue]="'3'">Level 3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="animation_div">
+    <div
+      class="animation w-96 h-80 bg-gradient-to-r from-indigo-600 to-pink-500 absolute top-0 -left-5 z-10 blur-2xl opacity-50 overflow-hidden rounded-full ml-10 mt-40"
+    ></div>
+  </div>
+
+  <div class="container h-20">
+    <div class="flex ml-52">
+      <h1 class="text-xl">Module</h1>
+      <h1 class="text-5xl font-serif hover:text-fuchsia-600">
+        Introduction to Trading
+      </h1>
+      <br />
+      <p class="text-xl">
+        Absolute goldmine for new traders: Start from personal finance to how to
+        place your first trade, and much more for beginners...
+      </p>
+    </div>
+  </div>
+
+  <div class="container flex justify-center align-middle mt-10">
+    <!-- <div class="flex"> -->
+    <div
+      class="w-96 h-56 border-4 bg-slate-800 border-violet-500 transition hover:border-orange-500 row border-r-0 g-0 p-3"
+    >
+      <div class="row g-0 bg-slate-800">
+        <h1 class="font-normal text-4xl bg-slate-800">
+          Basic of Personal Finance
+        </h1>
+        <p class="bg-slate-800">Trading world</p>
+        <br />
+        <br />
+
+        <button
+          (click)="openLevel1()"
+          class="btn bg-zinc-100 text-black text-center align-bottom font-bold p-3 border rounded-full border-orange-500 btn-primary ml-16"
+        >
+          Click Here
+        </button>
+      </div>
+      <!-- <button class="btn bg-red-500" (click)="toggleDiv()">
+        Toggle Content
+      </button> -->
+    </div>
+    <div
+      class="w-96 h-56 bg-slate-800 border-4 border-solid border-violet-500 border-l-0 row g-0 transition hover:border-orange-500"
+    >
+      <div class="row g-0">
+        <h1 class="text-xl font-normal text-center underline bg-slate-800">
+          WHAT YOU'LL LEARN
+        </h1>
+        <p
+          class="card-text text-xl font-normal text-white bg-slate-800 pb-5 rounded-t"
+        >
+          • How to manage your personal finances Various types of expences,
+          liabilities <br />
+          • Asset classes as well as how to caluclate them
+          <br />
+          • Basics of Insurance and goal-based investing<br />
+        </p>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="container flex justify-center align-middle mt-10">
+    <!-- <div class="flex"> -->
+    <div
+      class="w-96 h-56 border-4 border-violet-500 transition hover:border-orange-500 row border-r-0 g-0 p-3"
+    >
+      <div class="row g-0">
+        <h1 class="font-normal text-4xl">Basics of Trading</h1>
+        <p>Trading world</p>
+        <br />
+        <br />
+
+        <a
+          href="#"
+          class="btn bg-zinc-100 text-black text-center align-bottom font-bold p-5 border rounded-full border-orange-500 btn-primary ml-16"
+          >Go somewhere</a
+        >
+      </div>
+    </div>
+    <div
+      class="w-96 h-56 border-4 border-solid border-violet-500 border-l-0 row g-0 transition hover:border-orange-500"
+    >
+      <div class="row g-0">
+        <h1 class="text-xl font-normal text-center underline">
+          WHAT YOU'LL LEARN
+        </h1>
+        <p class="card-text text-xl font-normal text-white pb-5 rounded-t">
+          • Different types of orders and how to place them. <br />
+          • Tools of the trading terminal
+          <br />
+          • How to derivatives work<br />
+          • Risk management and psychology<br />
+        </p>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="container flex justify-center align-middle mt-10">
+    <!-- <div class="flex"> -->
+    <div
+      class="w-96 h-56 border-4 bg-slate-800 border-violet-500 transition hover:border-orange-500 row border-r-0 g-0 p-3"
+    >
+      <div class="row g-0 bg-slate-800">
+        <h1 class="font-normal text-4xl bg-slate-800">
+          Basic of Personal Finance
+        </h1>
+        <p class="bg-slate-800">Trading world</p>
+        <br />
+        <br />
+
+        <a
+          (click)="openLevel1()"
+          class="btn bg-zinc-100 text-black text-center align-bottom font-bold p-3 border rounded-full border-orange-500 btn-primary ml-16"
+        >
+          Click Here
+        </a>
+      </div>
+      <!-- <button class="btn bg-red-500" (click)="toggleDiv()">
+        Toggle Content
+      </button> -->
+    </div>
+    <div
+      class="w-96 h-56 bg-slate-800 border-4 border-solid border-violet-500 border-l-0 row g-0 transition hover:border-orange-500"
+    >
+      <div class="row g-0">
+        <h1 class="text-xl font-normal text-center underline bg-slate-800">
+          WHAT YOU'LL LEARN
+        </h1>
+        <p
+          class="card-text text-xl font-normal text-white bg-slate-800 pb-5 rounded-t"
+        >
+          • How to manage your personal finances Various types of expences,
+          liabilities <br />
+          • Asset classes as well as how to caluclate them
+          <br />
+          • Basics of Insurance and goal-based investing<br />
+        </p>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+
+  <!-- <div class="doc_container" *ngIf="selectedLevel === '1'">
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="col-md-4 border border-blue-500 p-3">
+        <iframe
+          width="520"
+          height="315"
+          src="https://www.youtube.com/embed/_ucD8sc30xY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="row g-0 mt-10">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="520"
+            height="315"
+            src="https://www.youtube.com/embed/_ucD8sc30xY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Body Size
+            </h5>
+            <p
+              class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • The body size represents the degree to which the bulls overcome
+              the bers (green candle) or the bears overcome the bulls (red
+              candle). <br />
+              • A large body shows incresed commitment<br />
+              • A small body shows reduced commitment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- *ngIf="selectedLevel === '1'" -->
+  <div
+    class="container mt-40"
+    *ngIf="selectedLevel === '1'"
+    [hidden]="!showDiv"
+  >
+    <div class="level1_container">
+      <div class="row g-0">
+        <div
+          class="col-md-4 border border-blue-500 transition hover:border-orange-500 p-3"
+        >
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/3WI9RZODuag"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/sx8sBN2prAE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/2j8xTuYDB5U"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-60" *ngIf="selectedLevel === '1'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/6fQwVxqqpAg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/344ZAhJff3Y"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/mm88r8jhrZs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-60" *ngIf="selectedLevel === '2'">
+    <div class="level1_container">
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/6fQwVxqqpAg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/344ZAhJff3Y"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-md-4 border border-blue-500 p-3">
+          <iframe
+            width="400"
+            height="315"
+            src="https://www.youtube.com/embed/mm88r8jhrZs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Bearish Engulfing
+            </h5>
+            <p
+              class="card-text font-normal bg-slate-900 text-white border border-fuchsia-500 rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • BEARISH two candle Reversal Patten. <br />
+              • First candle has a smaller GREEN real body.
+              <br />
+              • Second longer RED candle completely engulfs the first candle
+              body.<br />
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedLevel === '0'">
+    <h1>Working in progress</h1>
+  </div>
+  <div *ngIf="selectedLevel === '3'">
+    <h1>Working in progress</h1>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="max_btn">
+  <button class="button" (click)="toggleFullScreen(5)">
+    <i class="bi bi-fullscreen"> </i>
+  </button>
+</div>
+<nav class="iframe_window" id="window">
+  <div class="home_page">
+    <div class="page1" *ngIf="url1_load">
+      <div class="btn">
+        <button class="button" (click)="toggleFullScreen(1)">
+          <i class="bi bi-fullscreen"></i>
+        </button>
+      </div>
+      <iframe
+        class="iframe_container1"
+        *ngIf="url1"
+        id="iframe1"
+        [src]="url1"
+      ></iframe>
+    </div>
+
+    <div class="page2" *ngIf="url2_load">
+      <div class="btn">
+        <button class="button" (click)="toggleFullScreen(2)">
+          <i class="bi bi-fullscreen"></i>
+        </button>
+      </div>
+      <iframe
+        class="iframe_container2"
+        *ngIf="url2"
+        id="iframe2"
+        [src]="url2"
+      ></iframe>
+      <!-- <iframe
+      id="iframe2"
+      src="http://maps.google.com/?ie=UTF8&amp;t=m&amp;ll=37.09024,-95.712891&amp;spn=26.535573,37.353516&amp;z=4&amp;output=embed"
+    ></iframe> -->
+    </div>
+  </div>
+
+  <div class="home_page">
+    <div class="page3" *ngIf="url3_load">
+      <div class="btn">
+        <button class="button" (click)="toggleFullScreen(3)">
+          <i class="bi bi-fullscreen"></i>
+        </button>
+      </div>
+      <iframe
+        class="iframe_container3"
+        *ngIf="url3"
+        id="iframe3"
+        [src]="url3"
+      ></iframe>
+    </div>
+    <div class="page4" *ngIf="url4_load">
+      <div class="btn">
+        <button class="button" (click)="toggleFullScreen(4)">
+          <i class="bi bi-fullscreen"></i>
+        </button>
+      </div>
+      <iframe
+        class="iframe_container4"
+        *ngIf="url4"
+        id="iframe4"
+        [src]="url4"
+      ></iframe>
+    </div>
+  </div>
+</nav>
+<!-- <div #fullscreenContainer class="fullscreen-container"></div> -->
